@@ -7,10 +7,13 @@ export default class ParagraphCounter extends React.Component {
       counter: 0
     };
   }
+  
+  //increasing counter value by one after every click
   handleClick = e => {
     e.preventDefault();
     this.setState({ counter: this.state.counter + 1 });
   };
+
   render() {
     return (
       <div>

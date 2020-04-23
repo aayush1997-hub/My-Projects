@@ -7,13 +7,14 @@ export default class StopWatch extends React.Component {
       counter: 0
     };
   }
-
+//This method is used to increase the counter by 1 repeatedly after one second
   onStart = e => {
     e.preventDefault();
     this.interval = setInterval(() => {
       this.setState({ counter: this.state.counter + 1 });
     }, 1000);
   };
+//This method is used to stop the interval
   onStop = e => {
     e.preventDefault();
     clearInterval(this.interval);
